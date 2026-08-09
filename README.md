@@ -15,7 +15,7 @@
 
 **Transform any GitHub README into a premium product page with strong hierarchy, branded visuals, and fast scanability.**
 
-[Quick Start](#-quick-start) · [Formats](#-formats) · [Sections](#-section-reference) · [Assets](#-visual-assets) · [Examples](#-real-examples) · [Roadmap](#-roadmap)
+[Quick Start](#-quick-start) - [Formats](#-formats) - [Sections](#-section-reference) - [Assets](#-visual-assets) - [Examples](#-real-examples) - [Roadmap](#-roadmap)
 
 <img src="assets/beautifier-hero.svg" alt="GitHub Repo Beautifier hero banner" width="100%">
 
@@ -56,16 +56,21 @@ That makes it useful for:
 
 | Feature | Description |
 |---------|-------------|
-| **Two format modes** | Full Hero Banner style or Fast ASCII style — chosen based on project needs and asset availability. |
-| **Auto-generated assets** | SVG logo mark, hero banner, and architecture diagram tailored to each project. |
-| **Shield/badge orchestration** | Intentional badge rows: product info (`for-the-badge`) + tech stack (with logos). |
-| **Section rhythm** | 14-section structure with emoji-led headings for instant scanability. |
-| **Anti-slop copy** | Concrete numbers, active voice, phrase rotation — no corporate filler. |
-| **GitHub rendering verification** | Checks dark mode, link validity, and visual hierarchy before finalizing. |
-| **Cross-promo footer** | Author attribution + related projects, every time. |
-| **Asset checklist** | What to generate, in what format, and why. |
-| **Hermes-native packaging** | Ships as a SKILL.md with references and examples. |
-| **Real-world proven** | Battle-tested on hermes-optimizer, rag-shchedrovitsky, creative-system. |
+| **Two format modes** | Full Hero Banner style or Fast ASCII style - chosen based on project needs and asset availability |
+| **Auto-generated assets** | SVG logo mark, hero banner, and architecture diagram tailored to each project |
+| **Shield/badge orchestration** | Intentional badge rows: product info + tech stack |
+| **Section rhythm** | 14-section structure with emoji-led headings for instant scanability |
+| **Anti-slop copy** | Concrete numbers, active voice, phrase rotation - no corporate filler |
+| **GitHub rendering verification** | Checks dark mode, link validity, and visual hierarchy before finalizing |
+| **Cross-promo footer** | Author attribution + related projects |
+| **Asset checklist** | What to generate, in what format, and why |
+| **Hermes-native packaging** | Ships as a SKILL.md with references and examples |
+| **Mermaid diagrams** | Native GitHub rendering for architecture, flowcharts, sequence diagrams |
+| **GIF demos** | Show the tool in action with animated screenshots |
+| **Project structure tree** | Visual tree of the codebase for instant orientation |
+| **GitHub stats widgets** | Dynamic badges showing stars, forks, last commit |
+| **Dark-mode aware images** | Automatic light/dark image switching via picture element |
+| **Table of Contents** | Auto-generated TOC for long READMEs |
 
 ---
 
@@ -129,24 +134,24 @@ For quick wins without custom graphics — scripts, internal tools, or rapid pro
 
 ## 📐 Section Reference
 
-| # | Section | Emoji | When to use |
-|---|---------|-------|-------------|
-| 1 | Hero block | — | Every repo. Logo, badges, pitch, nav. |
-| 2 | Framing | > | When you need to set expectations or disclaimers. |
-| 3 | Concept | 💡 | When the "why" is not obvious. |
-| 4 | Features | ✨ | Every repo. Dense feature table. |
-| 5 | Quick Start | 🚀 | Every repo. One-command install/run. |
-| 6 | Core Mechanism | varies | When architecture matters (RAG, routing, pipeline). |
-| 7 | Package/Structure | varies | When readers need to know what files matter. |
-| 8 | At a Glance | 🧠 | When you want a signal/value summary table. |
-| 9 | Tech Stack | 🏗️ | When the stack is part of the identity. |
-| 10 | Workflow | 🧭 | When the flow is complex or unconventional. |
-| 11 | What It Improves | varies | When benefits need explanation. |
-| 12 | Example Output | varies | When the response/output shape matters. |
-| 13 | Quality Checks | 🛡️ | When verification is a selling point. |
-| 14 | Roadmap | 🗺️ | When the project is evolving. |
-| 15 | Contributing | 🤝 | When you want external contributions. |
-| 16 | License | 📄 | Every repo. MIT + footer. |
+| # | Section | When to use |
+|---|---------|-------------|
+| 1 | Hero block | Every repo. Logo, badges, pitch, nav. |
+| 2 | Framing | When you need to set expectations or disclaimers. |
+| 3 | Concept | When the "why" is not obvious. |
+| 4 | Features | Every repo. Dense feature table. |
+| 5 | Quick Start | Every repo. One-command install/run. |
+| 6 | Core Mechanism | When architecture matters (RAG, routing, pipeline). |
+| 7 | Package/Structure | When readers need to know what files matter. |
+| 8 | At a Glance | When you want a signal/value summary table. |
+| 9 | Tech Stack | When the stack is part of the identity. |
+| 10 | Workflow | When the flow is complex or unconventional. |
+| 11 | What It Improves | When benefits need explanation. |
+| 12 | Example Output | When the response/output shape matters. |
+| 13 | Quality Checks | When verification is a selling point. |
+| 14 | Roadmap | When the project is evolving. |
+| 15 | Contributing | When you want external contributions. |
+| 16 | License | Every repo. MIT + footer. |
 
 ---
 
@@ -172,9 +177,9 @@ For quick wins without custom graphics — scripts, internal tools, or rapid pro
 
 | Repo | Format | What was applied |
 |------|--------|------------------|
-| [hermes-optimizer](https://github.com/AzamatSafarov/hermes-optimizer) | Hero Banner | Logo, hero, architecture flow, 14 sections |
-| [rag-shchedrovitsky](https://github.com/AzamatSafarov/rag-shchedrovitsky) | Hero Banner | Full asset pack, RAG pipeline diagram |
-| [creative-system](https://github.com/AzamatSafarov/creative-system) | Fast ASCII | ASCII banner, emoji tree, status table |
+| demo-optimizer | Hero Banner | Logo, hero, architecture flow, 14 sections |
+| demo-rag-bot | Hero Banner | Full asset pack, RAG pipeline diagram |
+| demo-cli-tool | Fast ASCII | ASCII banner, emoji tree, status table |
 
 See `references/` for full example READMEs.
 
@@ -253,10 +258,6 @@ MIT. See [LICENSE](LICENSE).
 
 <div align="center">
 
-**Built by [Azamat Safarov](https://github.com/AzamatSafarov)**
-
-Related projects:
-- [hermes-optimizer](https://github.com/AzamatSafarov/hermes-optimizer) — cost-aware routing for Hermes Agent
-- [rag-shchedrovitsky](https://github.com/AzamatSafarov/rag-shchedrovitsky) — semantic Q&A over 335 works
+**Built for the open-source community**
 
 </div>
