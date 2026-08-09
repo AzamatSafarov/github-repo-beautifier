@@ -79,7 +79,7 @@ That makes it useful for:
 Install directly from GitHub:
 
 ```bash
-hermes skills install https://raw.githubusercontent.com/AzamatSafarov/github-repo-beautifier/main/SKILL.md -y
+hermes skills install https://raw.githubusercontent.com/$OWNER/github-repo-beautifier/main/SKILL.md -y
 ```
 
 Load it in Hermes:
@@ -114,7 +114,7 @@ For projects with visual identity - premium tool, open-source product, or portfo
 - Architecture/workflow diagram
 - Author footer with cross-promo
 
-**Best for:** hermes-optimizer, rag-shchedrovitsky, any public tool or library
+| **Best for:** demo-optimizer, demo-rag-bot, any public tool or library
 
 ### Format B: Fast ASCII Style
 
@@ -128,7 +128,7 @@ For quick wins without custom graphics - scripts, internal tools, or rapid proto
 - Status table (✅ 🟡 ❌)
 - Author footer
 
-**Best for:** creative-system, data pipelines, CLI tools
+| **Best for:** demo-cli-tool, data pipelines, CLI tools
 
 ---
 
@@ -227,7 +227,7 @@ See `references/` for full example READMEs.
 - [x] Two-format system (Hero Banner + Fast ASCII)
 - [x] SVG asset generation guidelines
 - [x] 14-section reference structure
-- [x] Real-world examples (hermes-optimizer, rag-shchedrovitsky, creative-system)
+- [x] Real-world examples (demo-optimizer, demo-rag-bot, demo-cli-tool)
 - [x] Anti-slop copy rules
 - [x] GitHub rendering verification
 - [ ] Web-based README preview tool
