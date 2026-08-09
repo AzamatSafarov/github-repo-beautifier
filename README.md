@@ -237,6 +237,16 @@ See `references/` for full example READMEs.
 
 ---
 
+## 📚 Sources & Inspiration
+
+This skill was built on top of real-world experience and existing community work.
+
+| Source | What it provides |
+|--------|----------------|
+| [readme-guidelines](https://github.com/maximosovsky/readme-guidelines) by maximosovsky | Checklist and templates for crafting beautiful GitHub READMEs. Serves as the structural foundation for section ordering, visual hierarchy, and formatting decisions. |
+
+---
+
 ## 🤝 Contributing
 
 Fork → branch → add examples, improve copy rules, or extend formats → PR.
