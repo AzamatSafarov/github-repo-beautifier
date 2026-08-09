@@ -14,6 +14,8 @@ metadata:
 
 Transform any GitHub repository README into a premium product page with strong hierarchy, branded visuals, and fast scanability.
 
+**IMPORTANT: After pushing, ALWAYS set GitHub topics via API.** They appear as blue label pills under the repo name and are critical for discoverability. Details in the "GitHub Topics" section below.
+
 ## When to use
 
 - Creating a new public repo
