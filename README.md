@@ -211,6 +211,70 @@ See `references/` for full example READMEs.
 
 ---
 
+## 🧭 Live Examples
+
+### Mermaid Diagram
+
+GitHub renders Mermaid natively - no external tools needed:
+
+```mermaid
+flowchart LR
+    A[Your README] --> B{Beautifier}
+    B -->|Hero Banner| C[SVG assets + shields]
+    B -->|Fast ASCII| D[ASCII art + table]
+    C --> E[Premium README]
+    D --> E
+```
+
+### Project Structure
+
+```
+github-repo-beautifier/
+├── assets/
+│   ├── beautifier-mark.svg
+│   └── beautifier-hero.svg
+├── references/
+│   ├── complete-example.md
+│   └── html-footer-snippet.md
+├── README.md
+├── SKILL.md
+├── LICENSE
+├── CHANGELOG.md
+└── .gitignore
+```
+
+### GitHub Stats
+
+Dynamic badges that update automatically:
+
+![Stars](https://img.shields.io/github/stars/$OWNER/$REPO?style=flat-square)
+![Forks](https://img.shields.io/github/forks/$OWNER/$REPO?style=flat-square)
+![Last commit](https://img.shields.io/github/last-commit/$OWNER/$REPO?style=flat-square)
+
+### Dark Mode Support
+
+Automatic light/dark image switching via `picture` element:
+
+```html
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
+  <img src="assets/hero-light.svg" alt="Hero banner">
+</picture>
+```
+
+### Table of Contents
+
+Long READMEs stay navigable with anchor links:
+
+- [Concept](#concept)
+- [Features](#features)
+- [Quick Start](#quick-start)
+- [Live Examples](#live-examples)
+- [Usage](#usage)
+- [Roadmap](#roadmap)
+
+---
+
 ## 🛡️ Quality Checks
 
 - README/link lint workflow on push
