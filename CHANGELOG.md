@@ -8,7 +8,7 @@
 - SVG asset generation specs (logo mark, hero banner, architecture flow)
 - 14-section reference structure for READMEs
 - Anti-slop copy rules with phrase rotation bank
-- Real-world examples: hermes-optimizer, rag-shchedrovitsky, creative-system
+- Real-world examples: demo-optimizer, demo-rag-bot, demo-cli-tool
 - `llms.txt` / `llms-full.txt` for LLM-assisted discovery
 - `.gitignore`
 - MIT License

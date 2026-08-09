@@ -1,153 +1,141 @@
-# Полный пример README.md (creative-system)
+# Fast ASCII Format Example (demo-project)
 
-> **Источник:** `AzamatSafarov/creative-system` — реальный репозиторий с бейджами, ASCII-артом, эмодзи-деревом и статусной таблицей.
+> Dense, scannable README for tools, scripts, and internal projects without custom visuals.
 
 ---
 
 ```markdown
-# 🌀 Creative System
+# ⚡ Demo Project
 
 <div align="center">
 
 ```
-╔═══════════════════════════════════════════════════════╗
-║  Work → (System Observes) → Draft → Approve → Publish ║
-║         Работа  →  Наблюдение  →  Черновик  →  Публикация   ║
-╚═══════════════════════════════════════════════════════╝
+╔═══════════════════════════════════════════════════╗
+║   FastQuery → Cache → Transform → Respond         ║
+║   CLI tool for quick data pipeline prototyping    ║
+╚═══════════════════════════════════════════════════╝
 ```
 
-[![GitHub](https://img.shields.io/badge/GitHub-AzamatSafarov%2Fcreative--system-161b22?style=flat-square&logo=github)](https://github.com/AzamatSafarov/creative-system)
+[![GitHub](https://img.shields.io/badge/GitHub-OWNER%2Fdemo--project-161b22?style=flat-square&logo=github)](https://github.com/OWNER/demo-project)
 [![Status](https://img.shields.io/badge/status-active-success?style=flat-square)](#)
-[![Stack](https://img.shields.io/badge/stack-FastAPI%20%2B%20SQLite%20%2B%20D3.js-blue?style=flat-square)](#)
-[![Posts](https://img.shields.io/badge/posts-2%20published-yellow?style=flat-square)](#)
-[![Vault](https://img.shields.io/badge/vault-LLM--Wiki-8b5cf6?style=flat-square)](#)
+[![Stack](https://img.shields.io/badge/stack-Python%20%2B%20SQLite-blue?style=flat-square)](#)
+[![Version](https://img.shields.io/badge/version-0.3.0-yellow?style=flat-square)](#)
 
-> *Работаешь — система пишет. Ты только решаешь, публиковать или нет.*
+> *Process CSV files in 3 commands. No config files, no dependencies beyond Python standard library.*
 
 </div>
 
-## Что это
+## What it does
 
-Перманентная творческая система: любая деятельность (код, размышления, обсуждение) автоматически превращается в черновики статей. Ручной апрув перед публикацией.
+Reads CSV, applies transforms, outputs JSON or SQL inserts. Designed for ad-hoc data tasks where spinning up a full ETL pipeline is overkill.
 
-## Архитектура
-
-```
-┌─────────────┐    ┌─────────────────┐    ┌──────────────┐    ┌─────────────┐
-│  LLM-Wiki   │───→│  Autoposting    │───→│   Telegram   │───→│  Опубликовано│
-│  (Obsidian) │    │  (FastAPI)      │    │  @Azamat_    │    │  в Telegram  │
-│             │    │  SQLite         │    │  Safar0v     │    │              │
-└─────────────┘    └─────────────────┘    └──────────────┘    └─────────────┘
-       ↑
-       │    ┌─────────────────┐
-       └───→│ Artifact-Journalist│
-            │ (AI-наблюдатель) │
-            └─────────────────┘
-```
-
-## Структура
+## Architecture
 
 ```
-creative-system/
-├── 📖 README.md              ← ты здесь
-├── 📜 CHANGELOG.md           ← история всех изменений
-│
-├── ⚙️ autoposting-pro/       ← FastAPI + SQLite движок
-│   ├── main.py               ← Telegram publisher (рабочий)
-│   ├── requirements.txt      ← зависимости
-│   └── index.html            ← HTML-клиент
-│
-├── 📝 llm-wiki/              ← Obsidian vault (симлинк)
-│   └── articles/             ← 20 папок под платформы
-│       ├── 00-concepts/      ← философия, архитектура
-│       ├── 02-telegram/     ← Telegram @Azamat_Safar0v
-│       ├── 03-devto/         ← Dev.to (EN)
-│       └── 99-archive/       ← опубликованное
-│
-├── 🔍 agent-journalist/      ← AI-наблюдатель
-│   ├── scan.py               ← сканер git + wiki
-│   └── render.py             ← HTML → PNG рендер
-│
-└── 🎨 assets/
-    └── diagrams/             ← PNG-карты системы
+┌─────────┐    ┌──────────┐    ┌─────────┐    ┌──────────┐
+│  input  │───→│  parser  │───→│ transform│───→│  output  │
+│  .csv   │    │  (csv)   │    │  (jinja) │    │ .json    │
+└─────────┘    └──────────┘    └─────────┘    └──────────┘
 ```
 
-## Статус платформ
+## Structure
 
-| Платформа | Папка | Статус | Язык | Формат |
-|-----------|-------|--------|------|--------|
-| Telegram | `02-telegram/` | ✅ Работает | RU | Короткие посты |
-| Dev.to | `03-devto/` | 🟡 Заглушка | EN | Технические статьи |
-| Medium | `04-medium/` | 🟡 Заглушка | EN | Длинные статьи |
-| X/Twitter | `08-x-twitter/` | 🟡 Заглушка | EN | Треды |
-| VK | `09-vk/` | 🟡 Заглушка | RU | Посты |
-| LinkedIn | `10-linkedin/` | 🟡 Заглушка | EN | Профессиональные |
-| Habr | `17-habr/` | ❌ Нет API | RU | Ручная публикация |
-| vc.ru | `18-vcru/` | ❌ Нет API | RU | Ручная публикация |
+```
+demo-project/
+├── 📖 README.md           ← you are here
+├── 📜 CHANGELOG.md        ← version history
+│
+├── ⚙️ src/                ← source code
+│   ├── __init__.py
+│   ├── parser.py          ← CSV reading
+│   ├── transform.py       ← data transforms
+│   └── output.py          ← JSON/SQL writers
+│
+├── 🧪 tests/              ← pytest suite
+│   └── test_pipeline.py
+│
+└── 📋 examples/           ← sample CSV files
+    └── sample.csv
+```
 
-## Process Notes
+## Status
 
-### Инструменты
-- HTML/SVG диаграммы: JetBrains Mono, dark theme
-- Рендер: Playwright + headless Chromium
-- Автопуш: cron + bash (`llm-wiki-autopush`)
+| Feature | Status | Notes |
+|---------|--------|-------|
+| CSV parsing | ✅ Done | Handles UTF-8, quotes, newlines |
+| JSON output | ✅ Done | Pretty-printed or compact |
+| SQL output | ✅ Done | INSERT statements |
+| Jinja transforms | 🟡 Partial | Basic filters only |
+| Excel input | ❌ No plans | Use `xlsx2csv` first |
+| Streaming | ❌ Blocked | Memory constraints |
 
-### Что работает / не работает
-- ✅ Telegram публикация через FastAPI API
-- ✅ Cron push в GitHub каждый день в 23:00
-- 🟡 Dev.to, Medium, X, VK, LinkedIn — заглушки, нужны API ключи
-- ❌ Habr, vc.ru — нет API для публикации
+## Install
 
-## Где всё лежит
+```bash
+git clone https://github.com/OWNER/demo-project.git
+cd demo-project
+python -m pip install -e .
+```
 
-| Слой | Что | Где |
-|------|-----|-----|
-| Контент | Obsidian vault | `C:\Users\akuta\Documents\LLM-Wiki` |
-| Backend | FastAPI + SQLite | `~/creative-system/autoposting-pro/` |
-| Frontend | HTML-клиент | `index.html` |
-| AI Agent | Сканер + рендер | `~/.hermes/skills/artifact-journalist/` |
-| Backup | Git cron | `AzamatSafarov/llm-wiki` (private) |
+## Quick start
 
-## Авторство
+```bash
+# CSV → JSON
+python -m demo_project input.csv --format json
 
-**Собрал и систематизировал [Азамат Сафаров](https://github.com/AzamatSafarov)**
+# CSV → SQL inserts
+python -m demo_project input.csv --format sql --table users
 
-См. также:
-- [hessen-collected-works](https://github.com/AzamatSafarov/hessen-collected-works) — собрание сочинений С.И. Гессена
-- [gessen-timeline](https://github.com/AzamatSafarov/gessen-timeline) — интерактивный таймлайн 235 работ
+# With custom transform
+python -m demo_project input.csv --transform uppercase
+```
+
+## Where things live
+
+| Layer | What | Where |
+|-------|------|-------|
+| Core | CSV parser | `src/parser.py` |
+| Core | Transforms | `src/transform.py` |
+| CLI | argparse entry | `src/__main__.py` |
+| Tests | pytest | `tests/` |
+| Docs | This README | `README.md` |
+
+## License
+
+MIT. See [LICENSE](LICENSE).
+
+---
+
+<div align="center">
+
+**Built for the open-source community**
+
+</div>
 ```
 
 ---
 
-## Ключевые элементы этого примера
+## Key elements of this example
 
-| Элемент | Где в тексте | Зачем |
-|---------|-----------|-------|
-| ASCII баннер | Под заголовком | Мгновенное понимание сути |
-| Shields row | Под ASCII | Статус, stack, метрики — одним взглядом |
-| Italic pitch | Под shields | 15 слов, объясняющих «зачем это» |
-| Emoji tree | `## Структура` | Визуальная навигация по папкам |
-| Status table | `## Статус` | ✅🟡❌ — сканируется за 2 секунды |
-| System map table | `## Где всё лежит` | Backend vs Frontend vs Agent |
-| Author footer | Внизу | Атрибуция, связанные проекты |
+| Element | Where | Why |
+|---------|-------|-----|
+| ASCII banner | Below title | Instant understanding of what this does |
+| Shields row | Under ASCII | Status, stack, version — one glance |
+| Italic pitch | Under shields | 15 words explaining "why this exists" |
+| Emoji tree | `## Structure` | Visual file navigation |
+| Status table | `## Status` | ✅🟡❌ — scannable in 2 seconds |
+| Where table | `## Where things live` | Code vs tests vs docs |
+| Author footer | Bottom | Attribution |
 
-## Бейджи (shields.io)
+## Badge color codes
 
-```markdown
-[![GitHub](https://img.shields.io/badge/GitHub-USER%2FREPO-161b22?style=flat-square&logo=github)](URL)
-[![Status](https://img.shields.io/badge/status-active-success?style=flat-square)](#)
-[![Stack](https://img.shields.io/badge/stack-TECH-blue?style=flat-square)](#)
-[![Posts](https://img.shields.io/badge/posts-N-yellow?style=flat-square)](#)
-```
+- `success` = green, works
+- `blue` = info, stack
+- `yellow` = warning, partial
+- `red` = broken / no API
+- `lightgrey` = archive / not planned
 
-Color codes:
-- `success` = зелёный, работает
-- `blue` = информация, стек
-- `yellow` = предупреждение, частично
-- `red` = сломано / нет API
-- `lightgrey` = архив / история
+## Anti-slop example
 
-## Anti-slop пример
-
-Плохо: «Как вы можете видеть, система работает хорошо. Важно отметить, что...»
-Хорошо: «Telegram шлёт сообщения. Остальные платформы молчат — у них нет API ключей.»
+Bad: "As you can see, the system works well. It is important to note that..."
+Good: "CSV parsing works. Excel input does not — use xlsx2csv first."

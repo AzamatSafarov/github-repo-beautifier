@@ -24,7 +24,7 @@
 > GitHub Repo Beautifier does **not** generate generic READMEs. It reads your actual project and builds a landing-page rhythm that fits your stack, your audience, and your goals.
 
 > [!NOTE]
-> All examples in this repository are real projects. The skill adapts to each repo's content instead of forcing one template onto everything.
+> The skill adapts to each repo's content instead of forcing one template onto everything. See `references/` for example formats — customize with your own project details.
 
 ---
 
