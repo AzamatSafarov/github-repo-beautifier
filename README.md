@@ -145,7 +145,7 @@ Automatic light/dark switching via `picture` element.
 ```
 
 > [!TIP]
-> The `<picture>` element swaps images based on user's OS theme preference. No JavaScript required.
+> Add `assets/hero-dark.svg` and `assets/hero-light.svg` to your repo. The `<picture>` element swaps images based on user's OS theme preference. No JavaScript required.
 
 ### Cross-promo footer
 Author attribution + related projects for discovery.
@@ -154,7 +154,7 @@ Author attribution + related projects for discovery.
 What to generate, in what format, and why. See [Visual Assets](#-visual-assets).
 
 ### GIF demo
-Show the tool in action with animated screenshots.
+Show the tool in action. Add `assets/demo.gif` to your repository.
 
 ```markdown
 ![Demo](assets/demo.gif)
@@ -274,9 +274,11 @@ For quick wins without custom graphics - scripts, internal tools, or rapid proto
 
 | Repo | Format | What was applied |
 |------|--------|------------------|
-| demo-optimizer | Hero Banner | Logo, hero, architecture flow, 14 sections |
-| demo-rag-bot | Hero Banner | Full asset pack, RAG pipeline diagram |
+| demo-optimizer | Hero Banner | Logo, hero, sequence diagram, 14 sections |
+| demo-rag-bot | Hero Banner | Full asset pack, Mermaid diagrams, dark-mode images |
 | demo-cli-tool | Fast ASCII | ASCII banner, emoji tree, status table |
+
+Placeholder repo names — replace with your own when applying the skill.
 
 See `references/` for full example READMEs.
 
