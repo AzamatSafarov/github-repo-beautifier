@@ -102,7 +102,7 @@ The skill should inspect your project structure and README, then apply the right
 
 ### Format A: Hero Banner Style
 
-For projects with visual identity — premium tool, open-source product, or portfolio piece.
+For projects with visual identity - premium tool, open-source product, or portfolio piece.
 
 **Ingredients:**
 - Centered logo mark (SVG, 92×92)
@@ -118,7 +118,7 @@ For projects with visual identity — premium tool, open-source product, or port
 
 ### Format B: Fast ASCII Style
 
-For quick wins without custom graphics — scripts, internal tools, or rapid prototypes.
+For quick wins without custom graphics - scripts, internal tools, or rapid prototypes.
 
 **Ingredients:**
 - ASCII banner (≤3 lines)
