@@ -1,0 +1,141 @@
+# llms-full.txt — complete project details for LLM-assisted discovery
+
+Project: GitHub Repo Beautifier
+Type: Hermes Agent Skill
+Version: 2.0.0
+License: MIT
+Author: Azamat Safarov
+Repository: https://github.com/AzamatSafarov/github-repo-beautifier
+Raw Install: https://raw.githubusercontent.com/AzamatSafarov/github-repo-beautifier/main/SKILL.md
+
+## Full Description
+
+GitHub Repo Beautifier is a reusable Hermes skill that transforms any GitHub repository README into a premium, branded product page. It combines visual asset generation (SVG), intentional badge orchestration, structured copywriting, and GitHub rendering verification.
+
+Unlike template-based README generators that force the same structure onto every project, this skill:
+1. Reads the actual project structure and existing README
+2. Determines the project type (web app, library, CLI tool, data pipeline, visualization)
+3. Chooses between two formats based on needs and asset availability
+4. Generates custom visual assets (logo mark, hero banner, architecture diagram)
+5. Writes product-oriented copy with concrete numbers and anti-AI-slop rules
+6. Structures sections for scanability and hierarchy
+7. Verifies GitHub rendering before declaring done
+
+## Two Supported Formats
+
+### Format A: Hero Banner Style
+For projects with visual identity — premium tools, open-source products, portfolio pieces.
+
+Elements:
+- Centered logo mark (SVG, 92×92, dark gradient)
+- for-the-badge shields: product info (status, type, license) + tech stack with logos
+- Inline navigation anchors linking to major sections
+- Wide SVG hero banner (1200×400, dark-mode friendly)
+- Framing block with expectation-setting callout
+- 14-section structure with emoji-led headings
+- Architecture/workflow diagram (SVG)
+- Author footer with cross-promotion links
+
+Real examples using this format:
+- hermes-optimizer (provider-agnostic Hermes optimization skill)
+- rag-shchedrovitsky (RAG bot for Shchedrovitsky's 335 works)
+
+### Format B: Fast ASCII Style
+For quick wins without custom graphics — scripts, data pipelines, CLI tools, rapid prototypes.
+
+Elements:
+- ASCII banner (≤3 lines, project name or tagline)
+- flat-square shields (GitHub, status, stack, license)
+- Italic pitch block (15 words max)
+- Emoji tree structure (📁 project/ ├── 📖 README.md ← start here)
+- Status table (✅ works, 🟡 partial, ❌ broken, 📦 archive, 💡 concept)
+- Author footer with links
+
+Real example:
+- creative-system (autoposting system, FastAPI + SQLite)
+
+## 14-Section Reference Structure
+
+1. Hero Block — centered: logo, badges, pitch, nav, banner
+2. Framing Block — > blockquote with expectation-setting, [!NOTE] callout
+3. Concept (💡) — why exists, what makes it different, "X does Y"
+4. Features (✨) — dense features table, 2 columns max
+5. Quick Start (🚀) — one-command install/run, option variants in <details>
+6. Core Mechanism — architecture, lanes, pipeline, how it works
+7. Package/Structure — what files matter, with emoji tree
+8. At a Glance (🧠) — signal/value summary table
+9. Tech Stack (🏗️) — layer/technology table
+10. Workflow (🧭) — ASCII flow or SVG diagram
+11. What It Improves — benefit table, area → typical improvement
+12. Example Output — sample response/request shape
+13. Quality Checks (🛡️) — what is verified, tested, linted
+14. Roadmap (🗺️) — checklist with ✅ (done) and 🟡 (planned)
+15. Contributing (🤝) — how to contribute, good contribution areas
+16. License (📄) — license text + author footer with cross-promo
+
+## Visual Asset Specs
+
+| Asset | Format | Dimensions | Colors | Purpose |
+|-------|--------|------------|--------|---------|
+| Logo mark | SVG | 92×92 | Dark bg (#0f0f1a → #1a1a2e), accent gradient | Identity above H1 |
+| Hero banner | SVG | 1200×400 | Same dark bg, accent line at top, tech tags | Top visual |
+| Architecture flow | SVG | 1000×280 | Box-and-arrow with colored borders | System diagram |
+| Social preview | PNG | 1280×640 | Same dark theme, centered title | GitHub Settings → Social preview |
+
+Shield Rules:
+- Product info: for-the-badge, no logos (status, type, license)
+- Tech stack: for-the-badge WITH logos (Python, FastAPI, TypeScript, etc.)
+- Max 10 badges total
+- Badge colors: success (green), blue (info), purple (type), lightgrey (license)
+
+## Anti-Slop Copy Rules
+
+Banned phrases:
+- «Как вы можете видеть»
+- «Важно отметить»
+- «Стоит упомянуть»
+- «Не забудьте»
+- «Как уже говорилось»
+- «Безусловно»
+
+Rotation bank (opening phrases):
+- «Готово»
+- «Сделано»
+- «Запушено»
+- «В продакшене»
+- «Финализировано»
+- «Оформлено»
+
+Status emoji variety:
+- Don't use ✅ more than 3 times in a row
+- Rotate: 🟢 📦 🚀 🎯 ✅
+
+Numbers rule: always use concrete numbers, never «много», «несколько», «ряд»
+
+## Installation
+
+```bash
+hermes skills install https://raw.githubusercontent.com/AzamatSafarov/github-repo-beautifier/main/SKILL.md -y
+```
+
+Usage:
+```text
+/skill github-repo-beautifier
+Make my repo look premium.
+```
+
+## File Structure
+
+github-repo-beautifier/
+├── assets/
+│   ├── beautifier-mark.svg
+│   └── beautifier-hero.svg
+├── references/
+│   ├── complete-example.md      (creative-system, ASCII format)
+│   └── html-footer-snippet.md   (HTML footer for visualizations)
+├── SKILL.md                      (runtime skill with rules)
+├── README.md                     (this file as product page)
+├── LICENSE                       (MIT)
+├── .gitignore
+├── llms.txt                      (machine-readable summary)
+└── llms-full.txt                 (complete project details)

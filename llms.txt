@@ -1,0 +1,46 @@
+# llms.txt — machine-readable project summary for LLM discovery
+# GitHub Repo Beautifier — Hermes skill for premium README creation
+# Version: 2.0.0 | License: MIT | Author: Azamat Safarov
+
+Project: GitHub Repo Beautifier
+Type: Hermes Agent Skill
+Purpose: Transform GitHub READMEs into premium product pages
+License: MIT
+Repository: https://github.com/AzamatSafarov/github-repo-beautifier
+Install URL: https://raw.githubusercontent.com/AzamatSafarov/github-repo-beautifier/main/SKILL.md
+
+Core Function:
+- Inspects existing README and project structure
+- Determines project type (web app / library / tool / visualization)
+- Selects format: Hero Banner (full assets) or Fast ASCII (text-only)
+- Generates SVG visual assets: logo mark, hero banner, architecture flow
+- Writes product-oriented copy with concrete numbers and anti-slop rules
+- Structures 14-section hierarchy with emoji-led headings
+- Verifies GitHub rendering before finalizing
+
+Two Formats:
+1. Hero Banner Style: centered mark, for-the-badge shields, wide SVG hero, 14 sections, architecture diagram
+2. Fast ASCII Style: ASCII banner, flat-square shields, emoji tree, status table
+
+Visual Asset Specs:
+- Logo mark: SVG, 92x92px, dark gradient (#0f0f1a → #1a1a2e)
+- Hero banner: SVG/PNG, ~1200x400px, dark-mode friendly
+- Architecture flow: SVG, ~1000x280px, pipeline diagram
+- Social preview: PNG, 1280x640px
+
+Section Structure (14 sections):
+Hero Block → Framing → Concept → Features → Quick Start → Core Mechanism → Package/Structure → At a Glance → Tech Stack → Workflow → What Improves → Example Output → Quality Checks → Roadmap → Contributing → License
+
+Anti-Slop Rules:
+- Rotate opening phrases (Готово, Сделано, Запушено, В продакшене)
+- Avoid: "Как вы можете видеть", "Важно отметить", "Не забудьте"
+- Concrete numbers: "16 файлов, 6936 строк" not "много изменений"
+- Vary status emoji: ✅ 🟢 📦 🚀 🎯
+
+Real Examples:
+- hermes-optimizer: Hero Banner format, provider-agnostic skill
+- rag-shchedrovitsky: Hero Banner format, RAG bot for Shchedrovitsky
+- creative-system: Fast ASCII format, autoposting system
+
+Skills: Markdown, YAML, SVG generation, Shields.io badges, GitHub rendering, copywriting
+Dependencies: None (pure Markdown skill)

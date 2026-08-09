@@ -1,0 +1,21 @@
+# Generated files
+__pycache__/
+*.pyc
+.pycache/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor backups
+*.swp
+*.bak
+*~
+
+# Environment
+.env
+.venv/
+
+# Local test directories
+test-repo/
+demo-repo/
