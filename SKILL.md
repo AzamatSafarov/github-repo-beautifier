@@ -152,6 +152,41 @@ See `references/complete-example.md` for this variant.
 - Concrete numbers: «16 файлов, 6936 строк» not «много изменений»
 - Vary status emoji: ✅ 🟢 📦 🚀 🎯
 
+## GitHub Topics (auto-generation)
+
+After pushing the repository, generate and set topics via GitHub API:
+
+### What topics do
+- Blue label pills under repo name on GitHub → instant discoverability
+- Power search filtering by topic
+- Required for trending/explore visibility
+
+### How to generate topics
+Extract from: project purpose + tech stack + license + domain + audience.
+
+**Template:**
+- 1 primary tech: `python`, `typescript`, `javascript`, `go`, `rust`...
+- 1 product type: `chatbot`, `dashboard`, `cli-tool`, `api`, `rag`...
+- 1 audience domain: `philosophy`, `finops`, `mlops`, `devops`, `ai-agent`...
+- `open-source` (always)
+- Stack specifics: `fastapi`, `langchain`, `qdrant`, `nextjs`, `react`...
+- Maximum 20 topics, each ≤35 chars, lowercase, hyphen
+
+### API call (after `git push`)
+```bash
+export GHTOK=$(gh auth token)
+curl -s -X PUT "https://api.github.com/repos/$OWNER/$REPO/topics" \
+  -H "Accept: application/vnd.github.mercy-preview+json" \
+  -H "Authorization: token ${GHTOK}" \
+  -H "Content-Type: application/json" \
+  -d '{"names":["python","chatbot","rag","azure-openai","qdrant","langchain","open-source","shchedrovitsky","philosophy","hermes-agent"]}'
+```
+
+### Verify
+Go to `https://github.com/$OWNER?tab=repositories` — topics appear as blue pills under repo name.
+
+**Rule: Never skip topics.** They are part of the premium presentation.
+
 ## References
 
 - `references/hermes-optimizer-example.md` — reference structure
