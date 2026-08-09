@@ -15,7 +15,7 @@
 
 **Transform any GitHub README into a premium product page with strong hierarchy, branded visuals, and fast scanability.**
 
-[Quick Start](#-quick-start) - [Formats](#-formats) - [Sections](#-section-reference) - [Assets](#-visual-assets) - [Examples](#-real-examples) - [Roadmap](#-roadmap)
+[Quick Start](#-quick-start) - [Features](#-features) - [Formats](#-formats) - [Sections](#-section-reference) - [Assets](#-visual-assets) - [Roadmap](#-roadmap)
 
 <img src="assets/beautifier-hero.svg" alt="GitHub Repo Beautifier hero banner" width="100%">
 
@@ -53,6 +53,46 @@ That makes it useful for:
 ---
 
 ## ✨ Features
+
+### Skill logic flow
+
+How the beautifier processes your repo step by step:
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant Hermes
+    participant Beautifier
+    participant GitHub
+
+    User->>Hermes: "Make my repo look premium"
+    Hermes->>Beautifier: Activate skill
+    Beautifier->>GitHub: Read repo structure & README
+    GitHub-->>Beautifier: Raw files & metadata
+    Beautifier->>Beautifier: Detect project type
+    Beautifier->>Beautifier: Choose format (Hero / ASCII)
+    Beautifier->>Beautifier: Generate assets (SVG, shields)
+    Beautifier->>Beautifier: Write product copy
+    Beautifier->>Beautifier: Structure 14 sections
+    Beautifier->>GitHub: Verify rendering (dark mode, links)
+    GitHub-->>Beautifier: OK / issues
+    Beautifier->>Hermes: Return premium README
+    Hermes->>User: Ready to commit
+```
+
+### Feature coverage
+
+```mermaid
+pie title What this README demonstrates
+    "Mermaid diagrams" : 20
+    "GitHub Alerts" : 15
+    "Shield badges" : 15
+    "Dark-mode images" : 10
+    "Structure tree" : 10
+    "Stats widgets" : 10
+    "TOC navigation" : 10
+    "GIF demos" : 10
+```
 
 ### Two format modes
 Full Hero Banner style or Fast ASCII style - chosen based on project needs and asset availability.
@@ -118,6 +158,9 @@ Automatic light/dark switching via `picture` element.
 </picture>
 ```
 
+> [!TIP]
+> The `<picture>` element swaps images based on user's OS theme preference. No JavaScript required.
+
 ### Cross-promo footer
 Author attribution + related projects for discovery.
 
@@ -139,7 +182,6 @@ Auto-generated anchor navigation for long READMEs.
 - [Quick Start](#-quick-start)
 - [Tech Stack](#-tech-stack)
 - [Roadmap](#-roadmap)
-
 
 ---
 
@@ -318,7 +360,16 @@ This skill was built on top of real-world experience and existing community work
 
 ## 🤝 Contributing
 
-Fork → branch → add examples, improve copy rules, or extend formats → PR.
+Contribution flow:
+
+```mermaid
+flowchart LR
+    A[Fork repo] --> B[Create branch]
+    B --> C[Add example / fix]
+    C --> D[Open PR]
+    D --> E[Review]
+    E --> F[Merge]
+```
 
 Good contribution areas:
 - Additional real-world example READMEs
@@ -326,6 +377,9 @@ Good contribution areas:
 - Better SVG asset templates
 - Automated rendering verification recipes
 - Multi-language README variants
+
+> [!WARNING]
+> Before contributing, check existing peer skills in `skills/<category>/` for tone and structure match.
 
 ---
 
