@@ -247,9 +247,9 @@ github-repo-beautifier/
 
 Dynamic badges that update automatically:
 
-![Stars](https://img.shields.io/github/stars/$OWNER/$REPO?style=flat-square)
-![Forks](https://img.shields.io/github/forks/$OWNER/$REPO?style=flat-square)
-![Last commit](https://img.shields.io/github/last-commit/$OWNER/$REPO?style=flat-square)
+![Stars](https://img.shields.io/github/stars/AzamatSafarov/github-repo-beautifier?style=flat-square)
+![Forks](https://img.shields.io/github/forks/AzamatSafarov/github-repo-beautifier?style=flat-square)
+![Last commit](https://img.shields.io/github/last-commit/AzamatSafarov/github-repo-beautifier?style=flat-square)
 
 ### Dark Mode Support
 
