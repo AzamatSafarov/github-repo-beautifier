@@ -15,7 +15,7 @@
 
 **Transform any GitHub README into a premium product page with strong hierarchy, branded visuals, and fast scanability.**
 
-[Quick Start](#-quick-start) - [Features](#-features) - [Formats](#-formats) - [Sections](#-section-reference) - [Assets](#-visual-assets) - [Roadmap](#-roadmap)
+[Quick Start](#-quick-start) - [Formats](#-formats) - [Sections](#-section-reference) - [Assets](#-visual-assets) - [Roadmap](#-roadmap)
 
 <img src="assets/beautifier-hero.svg" alt="GitHub Repo Beautifier hero banner" width="100%">
 
@@ -54,134 +54,18 @@ That makes it useful for:
 
 ## ✨ Features
 
-### Skill logic flow
-
-How the beautifier processes your repo step by step:
-
-```mermaid
-sequenceDiagram
-    participant User
-    participant Hermes
-    participant Beautifier
-    participant GitHub
-
-    User->>Hermes: "Make my repo look premium"
-    Hermes->>Beautifier: Activate skill
-    Beautifier->>GitHub: Read repo structure & README
-    GitHub-->>Beautifier: Raw files & metadata
-    Beautifier->>Beautifier: Detect project type
-    Beautifier->>Beautifier: Choose format (Hero / ASCII)
-    Beautifier->>Beautifier: Generate assets (SVG, shields)
-    Beautifier->>Beautifier: Write product copy
-    Beautifier->>Beautifier: Structure 14 sections
-    Beautifier->>GitHub: Verify rendering (dark mode, links)
-    GitHub-->>Beautifier: OK / issues
-    Beautifier->>Hermes: Return premium README
-    Hermes->>User: Ready to commit
-```
-
-### Feature coverage
-
-```mermaid
-pie title What this README demonstrates
-    "Mermaid diagrams" : 20
-    "GitHub Alerts" : 15
-    "Shield badges" : 15
-    "Dark-mode images" : 10
-    "Structure tree" : 10
-    "Stats widgets" : 10
-    "TOC navigation" : 10
-    "GIF demos" : 10
-```
-
-### Two format modes
-Full Hero Banner style or Fast ASCII style - chosen based on project needs and asset availability.
-
-### Auto-generated assets
-SVG logo mark, hero banner, and architecture diagram tailored to each project.
-
-### Shield/badge orchestration
-Intentional badge rows: product info + tech stack.
-
-### Section rhythm
-14-section structure with emoji-led headings for instant scanability.
-
-### Anti-slop copy
-Concrete numbers, active voice, phrase rotation - no corporate filler.
-
-### GitHub rendering verification
-Checks dark mode, link validity, and visual hierarchy before finalizing.
-
-### Mermaid diagrams
-Native GitHub rendering - no external tools needed.
-
-```mermaid
-flowchart LR
-    A[Your README] --> B{Beautifier}
-    B -->|Hero Banner| C[SVG assets + shields]
-    B -->|Fast ASCII| D[ASCII art + table]
-    C --> E[Premium README]
-    D --> E
-```
-
-### Project structure tree
-Visual tree for instant codebase orientation.
-
-```
-github-repo-beautifier/
-├── assets/
-│   ├── beautifier-mark.svg
-│   └── beautifier-hero.svg
-├── references/
-│   ├── complete-example.md
-│   └── html-footer-snippet.md
-├── README.md
-├── SKILL.md
-├── LICENSE
-└── CHANGELOG.md
-```
-
-### GitHub stats widgets
-Dynamic badges showing stars, forks, last commit - update automatically.
-
-![Stars](https://img.shields.io/github/stars/AzamatSafarov/github-repo-beautifier?style=flat-square)
-![Forks](https://img.shields.io/github/forks/AzamatSafarov/github-repo-beautifier?style=flat-square)
-![Last commit](https://img.shields.io/github/last-commit/AzamatSafarov/github-repo-beautifier?style=flat-square)
-
-### Dark-mode images
-Automatic light/dark switching via `picture` element.
-
-```html
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
-  <img src="assets/hero-light.svg" alt="Hero banner">
-</picture>
-```
-
-> [!TIP]
-> The `<picture>` element swaps images based on user's OS theme preference. No JavaScript required.
-
-### Cross-promo footer
-Author attribution + related projects for discovery.
-
-### Asset checklist
-What to generate, in what format, and why. See [Visual Assets](#-visual-assets).
-
-### GIF demo
-Show the tool in action with animated screenshots.
-
-```markdown
-![Demo](assets/demo.gif)
-```
-
-### Auto-generated TOC
-Auto-generated anchor navigation for long READMEs.
-
-- [Concept](#-concept)
-- [Features](#-features)
-- [Quick Start](#-quick-start)
-- [Tech Stack](#-tech-stack)
-- [Roadmap](#-roadmap)
+| Feature | Description |
+|---------|-------------|
+| **Two format modes** | Full Hero Banner style or Fast ASCII style - chosen based on project needs |
+| **Auto-generated assets** | SVG logo mark, hero banner, and architecture diagram for each project |
+| **Shield/badge orchestration** | Intentional badge rows: product info + tech stack |
+| **Section rhythm** | 14-section structure with emoji-led headings |
+| **Anti-slop copy** | Concrete numbers, active voice, no corporate filler |
+| **GitHub rendering verification** | Checks dark mode and visual hierarchy before finalizing |
+| **Mermaid diagrams** | Native GitHub rendering for architecture and flowcharts |
+| **GitHub stats widgets** | Dynamic badges showing stars, forks, last commit |
+| **Dark-mode images** | Automatic light/dark switching via picture element |
+| **Table of Contents** | Auto-generated anchor navigation |
 
 ---
 
@@ -360,16 +244,7 @@ This skill was built on top of real-world experience and existing community work
 
 ## 🤝 Contributing
 
-Contribution flow:
-
-```mermaid
-flowchart LR
-    A[Fork repo] --> B[Create branch]
-    B --> C[Add example / fix]
-    C --> D[Open PR]
-    D --> E[Review]
-    E --> F[Merge]
-```
+Fork → branch → add examples, improve copy rules, or extend formats → PR.
 
 Good contribution areas:
 - Additional real-world example READMEs
@@ -377,9 +252,6 @@ Good contribution areas:
 - Better SVG asset templates
 - Automated rendering verification recipes
 - Multi-language README variants
-
-> [!WARNING]
-> Before contributing, check existing peer skills in `skills/<category>/` for tone and structure match.
 
 ---
 
