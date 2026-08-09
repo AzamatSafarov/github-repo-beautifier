@@ -176,7 +176,7 @@ Auto-generated anchor navigation for long READMEs.
 Install directly from GitHub:
 
 ```bash
-hermes skills install https://raw.githubusercontent.com/$OWNER/github-repo-beautifier/main/SKILL.md -y
+hermes skills install https://raw.githubusercontent.com/AzamatSafarov/github-repo-beautifier/main/SKILL.md -y
 ```
 
 Load it in Hermes:
